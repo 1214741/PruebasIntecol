@@ -8,7 +8,7 @@
     ".NETCoreApp,Version=v6.0": {
       "GenerarArchivos/1.0.0": {
         "dependencies": {
-          "Aspose.BarCode": "22.1.0",
+          "Aspose.BarCode": "22.2.0",
           "DataMatrix.net": "0.4.2",
           "QRCoder": "1.4.3",
           "System.Drawing.Common": "6.0.0",
@@ -22,15 +22,15 @@
           "GenerarArchivos.dll": {}
         }
       },
-      "Aspose.BarCode/22.1.0": {
+      "Aspose.BarCode/22.2.0": {
         "dependencies": {
           "System.Drawing.Common": "6.0.0",
           "System.Text.Encoding.CodePages": "5.0.0"
         },
         "runtime": {
           "lib/net5.0/Aspose.BarCode.dll": {
-            "assemblyVersion": "22.1.0.0",
-            "fileVersion": "22.1.0.0"
+            "assemblyVersion": "22.2.0.0",
+            "fileVersion": "22.2.0.0"
           }
         }
       },
@@ -898,12 +898,12 @@
       "serviceable": false,
       "sha512": ""
     },
-    "Aspose.BarCode/22.1.0": {
+    "Aspose.BarCode/22.2.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-LvdMhz/b7vOw4AiuAcFucS5fawsszYNSSqrwzXtemSRECKkC8ih0M7/mML3VVXIDqd9425+bHYHkmJ98Ge+Gfg==",
-      "path": "aspose.barcode/22.1.0",
-      "hashPath": "aspose.barcode.22.1.0.nupkg.sha512"
+      "sha512": "sha512-mmwFyBZDS1l6hV2SO8TnTXD3+lLcYbX7yBxxMCfcUdb8eFcxKzzK5Q3S8vp/EqBGo/ELHvRzvJ3lHfC7kdtLxQ==",
+      "path": "aspose.barcode/22.2.0",
+      "hashPath": "aspose.barcode.22.2.0.nupkg.sha512"
     },
     "BouncyCastle/1.8.9": {
       "type": "package",

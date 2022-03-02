@@ -9,7 +9,6 @@
 
   <ItemGroup>
     <PackageReference Include="Aspose.BarCode" Version="22.2.0" />
-    <PackageReference Include="BarcodeLib" Version="2.4.0" />
     <PackageReference Include="DataMatrix.net" Version="0.4.2" />
     <PackageReference Include="itext7" Version="7.2.1" />
     <PackageReference Include="iTextSharp" Version="5.5.13.3" />
