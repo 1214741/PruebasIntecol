@@ -1,0 +1,134 @@
+*{
+    margin:0px;
+    padding:0% ;
+}
+
+
+body{
+    background: lightgray;
+    font-family:Arial, Helvetica, sans-serif;
+}
+/*No se usa*/
+#container {
+    width: 200%;
+    margin:0% auto;
+    border:5px solid yellow;
+}
+header{
+    background :black;
+    height: 80px;
+    width: 100%;
+    margin: 0px;
+    /*text-align: left;*/
+    line-height: 100px;
+    color: black;
+    /*border-bottom: 3px dashed yellow;*/
+}
+nav{
+    background: green;
+    height: 50px;
+    border:1px solid black;
+}
+nav ul li{
+    float:left;
+    list-style: none;
+    margin:10px;
+    line-height: 30px;
+}
+.clearfix{
+    clear: both;
+}
+
+#content{
+  float: left;  
+  width: 85%;
+  min-height:400px;
+  background: white; 
+}
+
+aside{
+    float:left;
+    width: 15%;
+    min-height:400px;
+    background: goldenrod;   
+}  
+
+footer{
+    background: black;
+    color: white;
+    text-align: center;
+    height: 50px;
+    line-height: 50px;
+}
+
+
+h2{
+    background: white;
+    text-align: center;    
+    background-color: black;
+    color: white ;
+}
+.Indumil{
+    padding: 6px; 
+    margin: 0px; 
+    float: left; 
+    width: 250px; 
+}
+:root {
+    --color-green: #00a878;
+    --color-red: #fe5e41;
+    --color-button: #fdffff;
+    --color-black: #000;
+}
+.switch-button {
+    display: inline-block;
+    text-align: center;
+}
+.switch-button .switch-button__checkbox  {
+    display: none;
+    text-align: center;
+}
+.switch-button .switch-button__label  {
+    background-color: var(--color-red);
+    width: 7rem;
+    height: 3rem;
+    border-radius: 3rem;
+    display: inline-block;
+    position: relative;
+}
+.switch-button .switch-button__label:before {
+    transition: .2s;
+    display: block;
+    position: relative;
+    width: 3rem;
+    height: 3rem;
+    background-color: var(--color-button);
+    content: '';
+    border-radius: 50%;
+    box-shadow: inset 0px 0px 0px 1px var(--color-black);
+}
+.switch-button .switch-button__checkbox:checked + .switch-button__label {
+    background-color: var(--color-green);
+}
+.switch-button .switch-button__checkbox:checked + .switch-button__label:before {
+    transform: translateX(4rem);
+}
+
+.flex-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+.flex-container > div {
+    background-color: #f1f1f1;
+    margin: 10px;
+    padding: 20px;
+    font-size: 30px;
+}
+footer {
+    text-align: center;
+    padding: 3px;
+    background-color: DarkSalmon;
+    color: white;
+  }
