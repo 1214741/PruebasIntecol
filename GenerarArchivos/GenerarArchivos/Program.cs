@@ -1,18 +1,18 @@
-﻿using DataMatrix.net;
+﻿//using DataMatrix.net;
 using System.Drawing;
 using System.Drawing.Imaging;
-using iText.Barcodes;
+//using iText.Barcodes;
 using System.Text;
 using System.Diagnostics;
-using iText.Kernel.Pdf;
-using TarCode;
-using iTextSharp.text.pdf;
-using iTextSharp.text;
-using System.ComponentModel;
-using BarcodeLib.Barcode;
-using iText.Barcodes.Qrcode;
-using iTextSharp.text.pdf.qrcode;
+//using iText.Kernel.Pdf;
+//using TarCode;
+//using iTextSharp.text.pdf;
+//using iTextSharp.text;
+//using System.ComponentModel;
+//using iText.Barcodes.Qrcode;
+//using iTextSharp.text.pdf.qrcode;
 using System.Drawing.Printing;
+using BarcodeLib.Barcode;
 
 namespace CrearTxt
 {
@@ -129,7 +129,7 @@ namespace CrearTxt
             BarcodeLib.Barcode.DataMatrix barcode = new BarcodeLib.Barcode.DataMatrix();
             //barcode.Data = "1dfefg % ^7fdsg56566";
             barcode.Data = encriptar;
-            barcode.UOM = UnitOfMeasure.PIXEL;
+            barcode.UOM = BarcodeLib.Barcode.UnitOfMeasure.PIXEL;
             barcode.ModuleSize = 3;
             barcode.LeftMargin = 0;
             barcode.RightMargin = 0;

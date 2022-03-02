@@ -2,7 +2,7 @@
   "version": 3,
   "targets": {
     "net6.0": {
-      "Aspose.BarCode/22.1.0": {
+      "Aspose.BarCode/22.2.0": {
         "type": "package",
         "dependencies": {
           "System.Drawing.Common": "5.0.2",
@@ -1361,15 +1361,15 @@
     }
   },
   "libraries": {
-    "Aspose.BarCode/22.1.0": {
-      "sha512": "LvdMhz/b7vOw4AiuAcFucS5fawsszYNSSqrwzXtemSRECKkC8ih0M7/mML3VVXIDqd9425+bHYHkmJ98Ge+Gfg==",
+    "Aspose.BarCode/22.2.0": {
+      "sha512": "mmwFyBZDS1l6hV2SO8TnTXD3+lLcYbX7yBxxMCfcUdb8eFcxKzzK5Q3S8vp/EqBGo/ELHvRzvJ3lHfC7kdtLxQ==",
       "type": "package",
-      "path": "aspose.barcode/22.1.0",
+      "path": "aspose.barcode/22.2.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Aspose_End-User-License-Agreement.txt",
-        "aspose.barcode.22.1.0.nupkg.sha512",
+        "aspose.barcode.22.2.0.nupkg.sha512",
         "aspose.barcode.nuspec",
         "images/aspose_barcode-for-net-min.png",
         "lib/net20/Aspose.BarCode.dll",
@@ -4966,7 +4966,7 @@
   },
   "projectFileDependencyGroups": {
     "net6.0": [
-      "Aspose.BarCode >= 22.1.0",
+      "Aspose.BarCode >= 22.2.0",
       "DataMatrix.net >= 0.4.2",
       "QRCoder >= 1.4.3",
       "System.Drawing.Common >= 6.0.0",
@@ -4980,11 +4980,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Intecol\\Documents\\JTamayo\\Indumil\\Pruebas\\GenerarArchivos\\GenerarArchivos\\GenerarArchivos.csproj",
+      "projectUniqueName": "C:\\Users\\Intecol\\Documents\\JTamayo\\PrueabasIntecol\\GenerarArchivos\\GenerarArchivos\\GenerarArchivos.csproj",
       "projectName": "GenerarArchivos",
-      "projectPath": "C:\\Users\\Intecol\\Documents\\JTamayo\\Indumil\\Pruebas\\GenerarArchivos\\GenerarArchivos\\GenerarArchivos.csproj",
+      "projectPath": "C:\\Users\\Intecol\\Documents\\JTamayo\\PrueabasIntecol\\GenerarArchivos\\GenerarArchivos\\GenerarArchivos.csproj",
       "packagesPath": "C:\\Users\\Intecol\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Intecol\\Documents\\JTamayo\\Indumil\\Pruebas\\GenerarArchivos\\GenerarArchivos\\obj\\",
+      "outputPath": "C:\\Users\\Intecol\\Documents\\JTamayo\\PrueabasIntecol\\GenerarArchivos\\GenerarArchivos\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Intecol\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -5015,7 +5015,7 @@
         "dependencies": {
           "Aspose.BarCode": {
             "target": "Package",
-            "version": "[22.1.0, )"
+            "version": "[22.2.0, )"
           },
           "DataMatrix.net": {
             "target": "Package",

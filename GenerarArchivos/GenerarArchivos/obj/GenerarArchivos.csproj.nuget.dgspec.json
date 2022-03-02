@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Intecol\\Documents\\JTamayo\\Indumil\\Pruebas\\GenerarArchivos\\GenerarArchivos\\GenerarArchivos.csproj": {}
+    "C:\\Users\\Intecol\\Documents\\JTamayo\\PrueabasIntecol\\GenerarArchivos\\GenerarArchivos\\GenerarArchivos.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Intecol\\Documents\\JTamayo\\Indumil\\Pruebas\\GenerarArchivos\\GenerarArchivos\\GenerarArchivos.csproj": {
+    "C:\\Users\\Intecol\\Documents\\JTamayo\\PrueabasIntecol\\GenerarArchivos\\GenerarArchivos\\GenerarArchivos.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Intecol\\Documents\\JTamayo\\Indumil\\Pruebas\\GenerarArchivos\\GenerarArchivos\\GenerarArchivos.csproj",
+        "projectUniqueName": "C:\\Users\\Intecol\\Documents\\JTamayo\\PrueabasIntecol\\GenerarArchivos\\GenerarArchivos\\GenerarArchivos.csproj",
         "projectName": "GenerarArchivos",
-        "projectPath": "C:\\Users\\Intecol\\Documents\\JTamayo\\Indumil\\Pruebas\\GenerarArchivos\\GenerarArchivos\\GenerarArchivos.csproj",
+        "projectPath": "C:\\Users\\Intecol\\Documents\\JTamayo\\PrueabasIntecol\\GenerarArchivos\\GenerarArchivos\\GenerarArchivos.csproj",
         "packagesPath": "C:\\Users\\Intecol\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Intecol\\Documents\\JTamayo\\Indumil\\Pruebas\\GenerarArchivos\\GenerarArchivos\\obj\\",
+        "outputPath": "C:\\Users\\Intecol\\Documents\\JTamayo\\PrueabasIntecol\\GenerarArchivos\\GenerarArchivos\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Intecol\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -42,7 +42,7 @@
           "dependencies": {
             "Aspose.BarCode": {
               "target": "Package",
-              "version": "[22.1.0, )"
+              "version": "[22.2.0, )"
             },
             "DataMatrix.net": {
               "target": "Package",

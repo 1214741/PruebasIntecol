@@ -8,7 +8,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Aspose.BarCode" Version="22.1.0" />
+    <PackageReference Include="Aspose.BarCode" Version="22.2.0" />
+    <PackageReference Include="BarcodeLib" Version="2.4.0" />
     <PackageReference Include="DataMatrix.net" Version="0.4.2" />
     <PackageReference Include="itext7" Version="7.2.1" />
     <PackageReference Include="iTextSharp" Version="5.5.13.3" />
@@ -18,13 +19,13 @@
 
   <ItemGroup>
     <Reference Include="BarcodeLib.Barcode.ASP.NET">
-      <HintPath>..\..\..\..\..\..\Desktop\BarcodeLib_NETBarcode_Trial\Dll\net40\BarcodeLib.Barcode.ASP.NET.dll</HintPath>
+      <HintPath>..\..\Libreriascsharp\BarcodeLib_NETBarcode_Trial\Dll\net40\BarcodeLib.Barcode.ASP.NET.dll</HintPath>
     </Reference>
     <Reference Include="KeepAutomation.Barcode.SSRS2005">
-      <HintPath>..\..\..\..\..\..\Desktop\KA.Barcode.for.NETSuite\DLL\SSRS\KeepAutomation.Barcode.SSRS2005.dll</HintPath>
+      <HintPath>..\..\Libreriascsharp\KA.Barcode.for.NETSuite\DLL\SSRS\KeepAutomation.Barcode.SSRS2005.dll</HintPath>
     </Reference>
     <Reference Include="TarCode Barcode for ASP.NET">
-      <HintPath>..\..\..\..\..\..\Desktop\TarCode.Barcode.Generator.NET.Suite.Trial\SDK\net framework 4.0\TarCode Barcode for ASP.NET.dll</HintPath>
+      <HintPath>..\..\Libreriascsharp\TarCode.Barcode.Generator.NET.Suite.Trial\SDK\net framework 4.0\TarCode Barcode for ASP.NET.dll</HintPath>
     </Reference>
   </ItemGroup>
 

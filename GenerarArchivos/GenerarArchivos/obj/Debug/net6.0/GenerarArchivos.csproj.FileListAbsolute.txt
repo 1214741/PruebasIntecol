@@ -46,3 +46,11 @@ C:\Users\Intecol\Documents\JTamayo\Indumil\Pruebas\GenerarArchivos\GenerarArchiv
 C:\Users\Intecol\Documents\JTamayo\Indumil\Pruebas\GenerarArchivos\GenerarArchivos\bin\Debug\net6.0\itextsharp.dll
 C:\Users\Intecol\Documents\JTamayo\Indumil\Pruebas\GenerarArchivos\GenerarArchivos\bin\Debug\net6.0\QRCoder.dll
 C:\Users\Intecol\Documents\JTamayo\Indumil\Pruebas\GenerarArchivos\GenerarArchivos\bin\Debug\net6.0\BarcodeLib.Barcode.ASP.NET.dll
+C:\Users\Intecol\Documents\JTamayo\PrueabasIntecol\GenerarArchivos\GenerarArchivos\obj\Debug\net6.0\GenerarArchivos.csproj.AssemblyReference.cache
+C:\Users\Intecol\Documents\JTamayo\PrueabasIntecol\GenerarArchivos\GenerarArchivos\obj\Debug\net6.0\GenerarArchivos.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Intecol\Documents\JTamayo\PrueabasIntecol\GenerarArchivos\GenerarArchivos\obj\Debug\net6.0\GenerarArchivos.AssemblyInfoInputs.cache
+C:\Users\Intecol\Documents\JTamayo\PrueabasIntecol\GenerarArchivos\GenerarArchivos\obj\Debug\net6.0\GenerarArchivos.AssemblyInfo.cs
+C:\Users\Intecol\Documents\JTamayo\PrueabasIntecol\GenerarArchivos\GenerarArchivos\obj\Debug\net6.0\GenerarArchivos.csproj.CoreCompileInputs.cache
+C:\Users\Intecol\Documents\JTamayo\PrueabasIntecol\GenerarArchivos\GenerarArchivos\obj\Debug\net6.0\GenerarArchivos.dll
+C:\Users\Intecol\Documents\JTamayo\PrueabasIntecol\GenerarArchivos\GenerarArchivos\obj\Debug\net6.0\ref\GenerarArchivos.dll
+C:\Users\Intecol\Documents\JTamayo\PrueabasIntecol\GenerarArchivos\GenerarArchivos\obj\Debug\net6.0\GenerarArchivos.pdb

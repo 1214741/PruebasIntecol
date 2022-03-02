@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "XJZoTOeX5BqtAcfTiagpsMIwfan2JcGt6BQKOTtLCHsBKyPceOFd0ZJFnwpIaDWwllMbQATGaeBGpXI907f7pw==",
+  "dgSpecHash": "duxK7x2Iwl7y2OuWZmGbAqCxKdPA01jL5b2m2p5LiHMuA/UPLExq7NKszcH86XDXMxjVLKPXLj3pOs/WXjs1vA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Intecol\\Documents\\JTamayo\\Indumil\\Pruebas\\GenerarArchivos\\GenerarArchivos\\GenerarArchivos.csproj",
+  "projectFilePath": "C:\\Users\\Intecol\\Documents\\JTamayo\\PrueabasIntecol\\GenerarArchivos\\GenerarArchivos\\GenerarArchivos.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Intecol\\.nuget\\packages\\aspose.barcode\\22.1.0\\aspose.barcode.22.1.0.nupkg.sha512",
+    "C:\\Users\\Intecol\\.nuget\\packages\\aspose.barcode\\22.2.0\\aspose.barcode.22.2.0.nupkg.sha512",
     "C:\\Users\\Intecol\\.nuget\\packages\\bouncycastle\\1.8.9\\bouncycastle.1.8.9.nupkg.sha512",
     "C:\\Users\\Intecol\\.nuget\\packages\\datamatrix.net\\0.4.2\\datamatrix.net.0.4.2.nupkg.sha512",
     "C:\\Users\\Intecol\\.nuget\\packages\\itext7\\7.2.1\\itext7.7.2.1.nupkg.sha512",
