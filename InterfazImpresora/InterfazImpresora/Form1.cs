@@ -91,33 +91,12 @@ namespace InterfazImpresora
             impresora.Close();
         }
 
-        private void btnEnviarPLC_Click(object sender, EventArgs e)
-        {
-            if (plclab.IsConnected)
-            {
-                bool uscita = (bool)plclab.Read("DB3.DBX0.1");
-                //if (uscita.Equals(false))
-                //{
-                    plclab.Write("DB3.DBX0.1", true);
-                    //plclab.Write("DB5.DBX6.0", "mul123456");
-                //}
-                txtRespuestaPLC.Text = uscita.ToString();
-
-            }
-            //var buffer = new byte[108];
-            //plcLab.DBRead(2, 0, buffer.Length, buffer);
-            //bool db2dbx80 = 
-
-
-        }
-        private void btnConsultarPLC_Click(object sender, EventArgs e)
-        {
-            // Creo que se puede borrar
-        }
+        
+        
 
         private void btnCerrarPLC_Click(object sender, EventArgs e)
         {
-            // Creo que se puede borrar
+            // poner para cerrar la conexion
         }
 
         private void Start_Click(object sender, EventArgs e)
