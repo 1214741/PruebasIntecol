@@ -24,10 +24,38 @@ header{
     color: black;
     /*border-bottom: 3px dashed yellow;*/
 }
-nav{
+h2{
+    background: white;
+    text-align: center;    
+    background-color: black;
+    color: white ;
+}
+.clearfix{
+    clear: both;
+}
+#content{
+    float: left;  
+    width: 85%;
+    min-height:500px;
+    background: white; 
+}
+aside{
+    float:left;
+    width: 15%;
+    min-height:500px;
+    background: goldenrod;   
+}
+:root {
+    --color-green: #00a878;
+    --color-red: #fe5e41;
+    --color-button: #fdffff;
+    --color-black: #000;
+}
+/*nav{
+    display: block;
     background: green;
     height: 50px;
-    border:1px solid black;
+    border:0px solid black;
 }
 nav ul li{
     float:left;
@@ -125,10 +153,4 @@ h2{
     margin: 10px;
     padding: 20px;
     font-size: 30px;
-}
-footer {
-    text-align: center;
-    padding: 3px;
-    background-color: DarkSalmon;
-    color: white;
-  }
+}*/

@@ -58,6 +58,9 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.lblCodigo = new System.Windows.Forms.Label();
             this.txtCodigoImpreso = new System.Windows.Forms.TextBox();
+            this.btnOnOff = new System.Windows.Forms.Button();
+            this.btnOpenClose = new System.Windows.Forms.Button();
+            this.btnGoStop = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnEnviarImp
@@ -339,11 +342,44 @@
             this.txtCodigoImpreso.Size = new System.Drawing.Size(227, 23);
             this.txtCodigoImpreso.TabIndex = 37;
             // 
+            // btnOnOff
+            // 
+            this.btnOnOff.Location = new System.Drawing.Point(38, 414);
+            this.btnOnOff.Name = "btnOnOff";
+            this.btnOnOff.Size = new System.Drawing.Size(75, 23);
+            this.btnOnOff.TabIndex = 38;
+            this.btnOnOff.Text = "On";
+            this.btnOnOff.UseVisualStyleBackColor = true;
+            this.btnOnOff.Click += new System.EventHandler(this.btnOnOff_Click);
+            // 
+            // btnOpenClose
+            // 
+            this.btnOpenClose.Location = new System.Drawing.Point(131, 414);
+            this.btnOpenClose.Name = "btnOpenClose";
+            this.btnOpenClose.Size = new System.Drawing.Size(75, 23);
+            this.btnOpenClose.TabIndex = 39;
+            this.btnOpenClose.Text = "Open";
+            this.btnOpenClose.UseVisualStyleBackColor = true;
+            this.btnOpenClose.Click += new System.EventHandler(this.btnOpenClose_Click);
+            // 
+            // btnGoStop
+            // 
+            this.btnGoStop.Location = new System.Drawing.Point(227, 414);
+            this.btnGoStop.Name = "btnGoStop";
+            this.btnGoStop.Size = new System.Drawing.Size(75, 23);
+            this.btnGoStop.TabIndex = 40;
+            this.btnGoStop.Text = "Go";
+            this.btnGoStop.UseVisualStyleBackColor = true;
+            this.btnGoStop.Click += new System.EventHandler(this.btnGoStop_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(763, 464);
+            this.Controls.Add(this.btnGoStop);
+            this.Controls.Add(this.btnOpenClose);
+            this.Controls.Add(this.btnOnOff);
             this.Controls.Add(this.txtCodigoImpreso);
             this.Controls.Add(this.lblCodigo);
             this.Controls.Add(this.textBox1);
@@ -413,5 +449,8 @@
         private TextBox textBox1;
         private Label lblCodigo;
         private TextBox txtCodigoImpreso;
+        private Button btnOnOff;
+        private Button btnOpenClose;
+        private Button btnGoStop;
     }
 }

@@ -1,25 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Intecol\\Desktop\\InterfazImpresora\\InterfazImpresora\\InterfazImpresora.csproj": {}
+    "C:\\Users\\Intecol\\Documents\\JTamayo\\PrueabasIntecol\\InterfazImpresora\\InterfazImpresora\\InterfazImpresora.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Intecol\\Desktop\\InterfazImpresora\\InterfazImpresora\\InterfazImpresora.csproj": {
+    "C:\\Users\\Intecol\\Documents\\JTamayo\\PrueabasIntecol\\InterfazImpresora\\InterfazImpresora\\InterfazImpresora.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Intecol\\Desktop\\InterfazImpresora\\InterfazImpresora\\InterfazImpresora.csproj",
+        "projectUniqueName": "C:\\Users\\Intecol\\Documents\\JTamayo\\PrueabasIntecol\\InterfazImpresora\\InterfazImpresora\\InterfazImpresora.csproj",
         "projectName": "InterfazImpresora",
-        "projectPath": "C:\\Users\\Intecol\\Desktop\\InterfazImpresora\\InterfazImpresora\\InterfazImpresora.csproj",
+        "projectPath": "C:\\Users\\Intecol\\Documents\\JTamayo\\PrueabasIntecol\\InterfazImpresora\\InterfazImpresora\\InterfazImpresora.csproj",
         "packagesPath": "C:\\Users\\Intecol\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Intecol\\Desktop\\InterfazImpresora\\InterfazImpresora\\obj\\",
+        "outputPath": "C:\\Users\\Intecol\\Documents\\JTamayo\\PrueabasIntecol\\InterfazImpresora\\InterfazImpresora\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
           "C:\\Users\\Intecol\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -72,7 +67,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.200\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.102\\RuntimeIdentifierGraph.json"
         }
       }
     }

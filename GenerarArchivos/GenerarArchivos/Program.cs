@@ -13,19 +13,24 @@ using System.Diagnostics;
 //using iTextSharp.text.pdf.qrcode;
 using System.Drawing.Printing;
 using BarcodeLib.Barcode;
+using System.IO;
 
 namespace CrearTxt
 {
     class Program
     {
 
+        static PrintDocument printDocument1 = new PrintDocument();
+        static string stringToPrint;
+
         static readonly string taller = "Mul"; // Codigo del taller
         static readonly string cod = "16"; // Codigo del producto
         static readonly int cant = 10; // Cantidad de productos a producir
         static int ui = 1745; // Ultimo impreso en bd
+
         static void Main(string[] args)
-        {           
-            for (int i = 1; i <= cant; i++)
+        {
+            /*for (int i = 1; i <= cant; i++)
             {
                 // Codigo taller(3 letras) + id producto(2 digitos) + consecutivo (8 cifras, puede cambiar)
                 //string codigoProducto = taller + cod + string.Format("{0:00000000}", ui + i);
@@ -40,8 +45,62 @@ namespace CrearTxt
                 //imprimir(codigoProducto);
                 imprimirDesdeDM();
 
+            }*/
+
+            string docName;
+            string docPath = @"C:\imprimir\";
+
+            for (int i = 1; i <= cant; i++)
+            {
+                
+                stringToPrint = codigoProducto();
+                docName = stringToPrint + ".job";
+                printDocument1.DocumentName = docName;
+                ui++;
+                FileInfo file = new FileInfo(docPath+docName);
+
+                ProcessStartInfo psi = new ProcessStartInfo();
+                psi.FileName = docName;
+                psi.UseShellExecute = false;
+                psi.Arguments = string.Format("{1}{0}", docName, file.FullName);
+                psi.CreateNoWindow = true;
+                psi.UseShellExecute = false;
+                Process p = new Process();
+                p.StartInfo = psi;
+                p.Start();
+
+                /*
+                using (StreamWriter sw = File.AppendText(docPath+docName))
+                {
+                    sw.WriteLine(stringToPrint);
+                }
+
+                printDocument1.DocumentName = docName;
+                //printDocument1.
+                using (FileStream stream = new FileStream(docPath + docName, FileMode.Open))
+                using (StreamReader reader = new StreamReader(stream))
+                {
+                    stringToPrint = reader.ReadToEnd();
+                }*/
+
             }
-            
+
+            //imprimirDMcolaImpresion();
+
+        }
+
+        private static void imprimirDMcolaImpresion()
+        {
+            int aux = ui;
+            // generarlos
+            for (int i = 1; i <= cant; i++)
+            {
+                generarDM(codigoProducto());
+                ui++;
+
+            }
+
+            // agregarlos a una cola de impresion
         }
 
         static void generarDMBitmap(string codigoProducto)
@@ -88,12 +147,20 @@ namespace CrearTxt
         {
             generarDM(codigoProducto());
             PrintDocument pd = new PrintDocument();
-            PrinterSettings ps = new PrinterSettings();
-            pd.PrinterSettings = ps;
+            //PrinterSettings ps = new PrinterSettings();
+            //pd.PrinterSettings = ps;
+            //pd.PrinterSettings.PrinterName = "Leibinger JET2neoS";
+            //Console.WriteLine(pd.PrinterSettings.PaperSizes.ToString());
             pd.PrintPage += traerImagen;
             //PrintQueue spooler = null;
-            
-            pd.Print();
+            if (pd.PrinterSettings.IsValid)
+            {
+                pd.Print();
+            }
+            else
+            {
+                Console.WriteLine("Printer is invalid.");
+            }
             //pd.Dispose();
         }
         static void traerImagen(object sender, PrintPageEventArgs e)

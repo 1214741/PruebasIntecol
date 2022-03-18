@@ -26,10 +26,7 @@ namespace InterfazImpresora
             {
                 plclab = new Plc(CpuType.S71200, ipPLC, 0, 1);
                 plclab.Open();
-                ///**/
-                //plcLab = new S7Client();
-                //plcLab.Connect();
-
+                
                 impresora = new TcpClient(ipImpr, PuertoImp);
                 stream = impresora.GetStream();
                 //Acción para deshabilitar botones de comando remoto cuando remoto.cheked =false
@@ -230,10 +227,7 @@ namespace InterfazImpresora
                 if (uscita.Equals(false))
                 {
                     plclab.Write("DB5.DBX4.5", true);
-
-                }
-                
-               
+                }               
             }
             else
             {
@@ -242,7 +236,6 @@ namespace InterfazImpresora
                 btnMotorAtras.Enabled = false;
                 btnMotorAdelante.Enabled = false;
             }
-
         }
 
         private void btnMotorAtras_Click(object sender, EventArgs e)
@@ -304,6 +297,9 @@ namespace InterfazImpresora
                 if (estadoSensor[1] == "1")
                 {
                     plclab.Write("DB5.DBX4.6", true);
+                    Byte[] codigoImpresora = Encoding.ASCII.GetBytes("^0!ET"+codigo+".");
+                    codigoImpresora[codigoImpresora.Length - 1] = 13;
+                    stream.Write(codigoImpresora, 0, codigoImpresora.Length);
                     Empezar++;
                 }
                 else
@@ -311,6 +307,62 @@ namespace InterfazImpresora
                     plclab.Write("DB5.DBX4.6", false);
                 }
            // }
+        }
+
+        private void btnOnOff_Click(object sender, EventArgs e)
+        {
+            string estatus = btnOnOff.Text;
+            if(estatus == "On")
+            {
+                Byte[] codigoImpresora = Encoding.ASCII.GetBytes("^0!PO.");
+                codigoImpresora[codigoImpresora.Length - 1] = 13;
+                stream.Write(codigoImpresora, 0, codigoImpresora.Length);
+                btnOnOff.Text = "Off";
+            }else if(estatus == "Off")
+            {
+                Byte[] codigoImpresora = Encoding.ASCII.GetBytes("^0!PF.");
+                codigoImpresora[codigoImpresora.Length - 1] = 13;
+                stream.Write(codigoImpresora, 0, codigoImpresora.Length);
+                btnOnOff.Text = "On";
+            }
+        }
+
+        private void btnOpenClose_Click(object sender, EventArgs e)
+        {
+            string estatus = btnOpenClose.Text;
+            if (estatus == "Open")
+            {
+                Byte[] codigoImpresora = Encoding.ASCII.GetBytes("^0!NO.");
+                codigoImpresora[codigoImpresora.Length - 1] = 13;
+                stream.Write(codigoImpresora, 0, codigoImpresora.Length);
+                btnOpenClose.Text = "Close";
+            }
+            else if (estatus == "Close")
+            {
+                Byte[] codigoImpresora = Encoding.ASCII.GetBytes("^0!NC.");
+                codigoImpresora[codigoImpresora.Length - 1] = 13;
+                stream.Write(codigoImpresora, 0, codigoImpresora.Length);
+                btnOpenClose.Text = "Open";
+            }
+        }
+
+        private void btnGoStop_Click(object sender, EventArgs e)
+        {
+            string estatus = btnGoStop.Text;
+            if (estatus == "Go")
+            {
+                Byte[] codigoImpresora = Encoding.ASCII.GetBytes("^0!GO.");
+                codigoImpresora[codigoImpresora.Length - 1] = 13;
+                stream.Write(codigoImpresora, 0, codigoImpresora.Length);
+                btnGoStop.Text = "Stop";
+            }
+            else if (estatus == "Stop")
+            {
+                Byte[] codigoImpresora = Encoding.ASCII.GetBytes("^0!ST.");
+                codigoImpresora[codigoImpresora.Length - 1] = 13;
+                stream.Write(codigoImpresora, 0, codigoImpresora.Length);
+                btnGoStop.Text = "Go";
+            }
         }
     }
     //todo: recordar que al cerrar la aplicación se debe llevar al estado de inicio remoto =false
