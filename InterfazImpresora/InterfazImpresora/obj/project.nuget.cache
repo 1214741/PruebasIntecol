@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Fd4Jai8TW0x9cip0UVN9SXE7H6M++cHDQhAPJnGP83QGIZ1ghZD0tXsIhI4CpZk0L7DAWTIbI7y7dGyU6lODjQ==",
+  "dgSpecHash": "i7/ALIrJ76SpJ7xRUBkbqawf3yyGW8JusWOpbjliKQD1Q2LuPxTxrb2yevDtvYh5z+L0eDLy5Wu5WEmM2wSYWw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Intecol\\Desktop\\PruebasIntecol\\InterfazImpresora\\InterfazImpresora\\InterfazImpresora.csproj",
+  "projectFilePath": "C:\\Users\\Intecol\\Documents\\JTamayo\\PruebasIntecol\\InterfazImpresora\\InterfazImpresora\\InterfazImpresora.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Intecol\\.nuget\\packages\\s7netplus\\0.13.0\\s7netplus.0.13.0.nupkg.sha512",
     "C:\\Users\\Intecol\\.nuget\\packages\\sharp7\\1.1.79\\sharp7.1.1.79.nupkg.sha512"

@@ -44,6 +44,10 @@ namespace InterfazImpresora
             Thread hiloCodigos = new Thread(new ThreadStart(GenerarCodigo));
             hiloCodigos.Start();
 
+            Thread hiloEstados = new Thread(new ThreadStart(PreguntarEstados));
+            hiloEstados.Start();
+            hiloEstados.Join();
+
             if (!chkRemoto.Checked)
             {
                 Start.Enabled = false;
@@ -62,6 +66,7 @@ namespace InterfazImpresora
 
             plclab.Write("DB5.DBX4.2", false);
 
+            
 
         }
 
@@ -74,8 +79,8 @@ namespace InterfazImpresora
 
         private void btnConsultarImp_Click(object sender, EventArgs e)
         {
-            Byte[] data = Encoding.ASCII.GetBytes(txtInstruccionImp.Text);
-            data[data.Length - 1] = 13;
+            Byte[] data = Encoding.ASCII.GetBytes(txtInstruccionImp.Text + "\r\n");
+            //data[data.Length - 1] = 13;
             stream.Write(data, 0, data.Length);
 
             data = new byte[256];
@@ -248,16 +253,17 @@ namespace InterfazImpresora
                 Thread.Sleep(1000);
                 plclab.Write("DB5.DBX4.7", false);
             }
+            textBox1.Text = "";
 
         }
         private void GenerarCodigo ()
         {
-            //while (true)
-            //{
+            while (true)
+            {
                 String Taller = "Mul";
                 int CodigoProducto = 16;
                 String codigo = String.Empty;
-                codigo = Taller + CodigoProducto.ToString() + String.Format("{0:00000000}", Empezar);
+                codigo = Taller + CodigoProducto.ToString();// + String.Format("{0:00000000}", Empezar);
                 txtCodigoImpreso.Text = codigo;
                 /**/
                 Byte[] data = Encoding.ASCII.GetBytes("^0?EX.");
@@ -285,7 +291,7 @@ namespace InterfazImpresora
                 {
                     plclab.Write("DB5.DBX4.6", false);
                 }
-           // }
+            }
         }
 
         private void btnOnOff_Click(object sender, EventArgs e)
@@ -327,21 +333,121 @@ namespace InterfazImpresora
 
         private void btnGoStop_Click(object sender, EventArgs e)
         {
+            Byte[] codigoImpresora;
             string estatus = btnGoStop.Text;
             if (estatus == "Go")
             {
-                Byte[] codigoImpresora = Encoding.ASCII.GetBytes("^0!GO.");
+                codigoImpresora = Encoding.ASCII.GetBytes("^0!GO.");
                 codigoImpresora[codigoImpresora.Length - 1] = 13;
                 stream.Write(codigoImpresora, 0, codigoImpresora.Length);
                 btnGoStop.Text = "Stop";
             }
             else if (estatus == "Stop")
             {
-                Byte[] codigoImpresora = Encoding.ASCII.GetBytes("^0!ST.");
+                codigoImpresora = Encoding.ASCII.GetBytes("^0!ST.");
                 codigoImpresora[codigoImpresora.Length - 1] = 13;
                 stream.Write(codigoImpresora, 0, codigoImpresora.Length);
                 btnGoStop.Text = "Go";
             }
+
+            codigoImpresora = Encoding.ASCII.GetBytes("^0=ETMul16.");
+            codigoImpresora[codigoImpresora.Length - 1] = 13;
+            stream.Write(codigoImpresora, 0, codigoImpresora.Length);
+        }
+
+        private void btnPreguntar_Click(object sender, EventArgs e)
+        {
+            PreguntarEstados();
+        }
+
+        public void PreguntarEstados()
+        {
+            //for(int i = 0; i < 10; i++)
+            //{
+            //bool aux = (bool)plclab.Read("DB7.DBX4.0");
+            //if (aux == true)
+            //{
+            //    textBox1.Text = "Paro de emergencia activo";
+            //}
+            //else
+            //{
+            //    textBox1.Text = "";
+            //}
+            //}
+            bool aux;
+            /**/
+            aux = (bool)plclab.Read("DB7.DBX4.0");
+            if (aux == true)
+            {
+                textBox1.Text = textBox1.Text + "Paro de emergencia activo";
+            }
+            else
+            {
+                textBox1.Text = textBox1.Text + "";
+            }
+            /**/
+            aux = (bool)plclab.Read("DB7.DBX4.1");
+            if (aux == true)
+            {
+                textBox1.Text = textBox1.Text + "Fallo Variador";
+            }
+            else
+            {
+                textBox1.Text = textBox1.Text + "";
+            }
+            /**/
+            aux = (bool)plclab.Read("DB7.DBX4.2");
+            if (aux == true)
+            {
+                textBox1.Text = textBox1.Text + "Fallo de Impresora";
+            }
+            else
+            {
+                textBox1.Text = textBox1.Text + "";
+            }
+            /**/
+            aux = (bool)plclab.Read("DB7.DBX4.3");
+            if (aux == true)
+            {
+                textBox1.Text = textBox1.Text + "Camara offline";
+            }
+            else
+            {
+                textBox1.Text = textBox1.Text + "";
+            }
+            /**/
+            aux = (bool)plclab.Read("DB7.DBX4.4");
+            if (aux == true)
+            {
+                textBox1.Text = textBox1.Text + "Codigo sin registro";
+            }
+            else
+            {
+                textBox1.Text = textBox1.Text + "";
+            }
+            /**/
+            aux = (bool)plclab.Read("DB7.DBX4.5");
+            if (aux == true)
+            {
+                textBox1.Text = textBox1.Text + "Codigo repetido";
+            }
+            else
+            {
+                textBox1.Text = textBox1.Text + "";
+            }
+            /**/
+            aux = (bool)plclab.Read("DB7.DBX4.6");
+            if (aux == true)
+            {
+                textBox1.Text = textBox1.Text + "Lectura erronea";
+            }
+            else
+            {
+                textBox1.Text = textBox1.Text + "";
+            }
+            /**/
+
+
         }
     }
     //todo: recordar que al cerrar la aplicación se debe llevar al estado de inicio remoto =false

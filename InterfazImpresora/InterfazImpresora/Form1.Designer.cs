@@ -56,6 +56,7 @@
             this.btnOnOff = new System.Windows.Forms.Button();
             this.btnOpenClose = new System.Windows.Forms.Button();
             this.btnGoStop = new System.Windows.Forms.Button();
+            this.btnPreguntar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnEnviarImp
@@ -281,7 +282,7 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(463, 358);
+            this.textBox1.Location = new System.Drawing.Point(462, 358);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(262, 23);
             this.textBox1.TabIndex = 35;
@@ -335,11 +336,22 @@
             this.btnGoStop.UseVisualStyleBackColor = true;
             this.btnGoStop.Click += new System.EventHandler(this.btnGoStop_Click);
             // 
+            // btnPreguntar
+            // 
+            this.btnPreguntar.Location = new System.Drawing.Point(662, 387);
+            this.btnPreguntar.Name = "btnPreguntar";
+            this.btnPreguntar.Size = new System.Drawing.Size(75, 23);
+            this.btnPreguntar.TabIndex = 41;
+            this.btnPreguntar.Text = "?";
+            this.btnPreguntar.UseVisualStyleBackColor = true;
+            this.btnPreguntar.Click += new System.EventHandler(this.btnPreguntar_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(763, 464);
+            this.Controls.Add(this.btnPreguntar);
             this.Controls.Add(this.btnGoStop);
             this.Controls.Add(this.btnOpenClose);
             this.Controls.Add(this.btnOnOff);
@@ -406,5 +418,6 @@
         private Button btnOnOff;
         private Button btnOpenClose;
         private Button btnGoStop;
+        private Button btnPreguntar;
     }
 }
